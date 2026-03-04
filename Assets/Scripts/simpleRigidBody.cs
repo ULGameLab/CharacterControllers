@@ -38,7 +38,7 @@ public class simpleRigidBody : MonoBehaviour
         if (grounded) {
             _animator.SetFloat("Vertical", 0);
         } else {
-            _animator.SetFloat("Vertical", _rigidbody.velocity.y);
+            _animator.SetFloat("Vertical", _rigidbody.linearVelocity.y);
         }       
 
         //sliding check        

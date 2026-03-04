@@ -17,6 +17,7 @@ public class SlopeAndStuff : MonoBehaviour
     private Vector3 movement;
     private Vector3 velocity;
     private bool normal = false;
+    
     // Start is called before the first frame update
     void Start() {
         controller = gameObject.GetComponent<CharacterController>();

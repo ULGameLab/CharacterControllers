@@ -17,7 +17,10 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed, 0);
-        controller.Move(transform.forward * playerSpeed * Input.GetAxis("Vertical") * Time.deltaTime);        
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
+
+        transform.Rotate(0, h * rotateSpeed, 0);
+        controller.Move(transform.forward * playerSpeed * v * Time.deltaTime);        
     }
 }
